@@ -6,6 +6,29 @@ nav{
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 400px;
+  display: flex; /* Torna a caixa flexível  */
+  flex-direction: row; /* Muda a direção dos itens  */
+  justify-content: center; /* Alinha horizontalmente  */
+  align-items: center; /* Alinha verticalmente  */
+  flex-wrap: wrap; /* Permite pular linha  */
+  align-content: flex-end; /* Alinha verticalmente as linhas após o wrap  */
+  }
+
+  ul li:first-child{ /*  Primeiro item destes elementos */
+    order: 1;
+    flex-basis: 1000px; /*  Determina o tamanho mínimo  */
+    background-color: red;
+  }
+
+   ul li:nth-child(2){ /*  Pega determinado posição "n" destes elementos */
+    background-color: red;
+  }
+
+  ul > * { /*  Pega todos os filhos diretos de ul */
+    flex-shrink: 1; /*  Determina como os itens vão encolher */
+    flex-grow: 1; /*  Determina como os itens vão crescer */
+    border: 3px red solid ;
   }
 
   & a:link,
